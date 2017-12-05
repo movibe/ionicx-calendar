@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {CalendarModalOptions} from 'ion2-calendar';
+import {CalendarComponentOptions} from 'ion2-calendar';
 
 @Component({
   selector: 'page-home',
@@ -10,16 +10,16 @@ export class HomePage {
   date: string;
   type: 'string'; // 'string' | 'js-date' | 'moment' | 'time' | 'object'
 
-  options: CalendarModalOptions
+  options: CalendarComponentOptions
 
   constructor() {
 
     this.options = {
       monthFormat: 'MM/yyyy',
       weekdays: ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sab'],
+      monthPickerFormat: ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'],
       weekStart: 1,
       color: 'light',
-      defaultDate: new Date(),
     }
   }
 
